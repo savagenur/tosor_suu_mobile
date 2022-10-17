@@ -16,12 +16,12 @@ const kTextColor = Color(0xFF757575);
 const kAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
-  fontSize: getPropScreenWidth(28),
+  fontSize: getPropScreenWidth(20),
   fontWeight: FontWeight.bold,
   color: Colors.black,
-  height: 1.5,
 );
-const defaultDuration = Duration(milliseconds: 250);
+
+const defaultDuration = Duration(milliseconds: 700);
 
 // Form error
 final RegExp emailValidatorRegExp =

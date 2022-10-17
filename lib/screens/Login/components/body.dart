@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/constants.dart';
+import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
+
+import '../../../components/default_button.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -33,41 +36,14 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenHeight(20),
             ),
-            DefaultButton(press: () {
-              
-            },text: "Вход",),
+            DefaultButton(
+              press: () {
+                Navigator.pushNamed(context, HomeScreen.routeName);
+              },
+              text: "Вход",
+            ),
             const Spacer(),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class DefaultButton extends StatelessWidget {
-  final String text;
-  final GestureTapCallback press;
-  const DefaultButton({
-    Key? key, required this.text, required this.press,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: double.infinity,
-      height: getPropScreenHeight(50),
-      child: ElevatedButton(
-        onPressed: press,
-        child: Text(
-          text,
-          style:
-              TextStyle(color: Colors.white, fontSize: getPropScreenWidth(18)),
-        ),
-        style: ElevatedButton.styleFrom(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          backgroundColor: kPrimaryColor,
         ),
       ),
     );

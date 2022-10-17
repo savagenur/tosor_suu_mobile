@@ -4,6 +4,7 @@ import 'package:tosor_suu_mobile/size_config.dart';
 import 'components/body.dart';
 
 class LoginScreen extends StatelessWidget {
+  static const routeName = '/login';
   const LoginScreen({super.key});
 
   @override
@@ -13,6 +14,7 @@ class LoginScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             "Логин",
             style: Theme.of(context).textTheme.headline6,

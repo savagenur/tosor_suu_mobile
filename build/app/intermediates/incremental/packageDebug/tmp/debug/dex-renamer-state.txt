@@ -1,4 +1,4 @@
-#Fri Oct 14 17:00:48 KGT 2022
+#Mon Oct 17 13:41:30 KGT 2022
 base.0=/Users/savagenur/Flutter Projects/tosor_suu_mobile/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
