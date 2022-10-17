@@ -1,0 +1,8 @@
+version: "Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)"
+options: "6993c5ea4958288393a9ecbae246547bf91dc5b1da9e6e2e4b1d36dc4343a04f"
+build_start_time: [1665736788, 455266952]
+build_end_time: [1665736794, 749910831]
+inputs:
+  "/Users/savagenur/Flutter Projects/tosor_suu_mobile/macos/Flutter/GeneratedPluginRegistrant.swift": [1665736773, 919567584]
+  "/Users/savagenur/Flutter Projects/tosor_suu_mobile/macos/Runner/AppDelegate.swift": [1664940576, 0]
+  "/Users/savagenur/Flutter Projects/tosor_suu_mobile/macos/Runner/MainFlutterWindow.swift": [1664940576, 0]
