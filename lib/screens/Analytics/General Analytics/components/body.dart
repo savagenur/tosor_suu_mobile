@@ -31,7 +31,7 @@ class Body extends StatelessWidget {
           ),
           SizedBox(height: getPropScreenWidth(30),),
          const AnimatedAnalyticScale(
-            text: "Собранно за всё время",
+            text: "Собранно за август 2022",
             current: 230000,
             total: 400000,
           ),
