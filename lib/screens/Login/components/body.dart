@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tosor_suu_mobile/constants.dart';
 import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
 
@@ -31,7 +30,7 @@ class Body extends StatelessWidget {
               decoration: InputDecoration(
                   contentPadding:
                       EdgeInsets.symmetric(horizontal: getPropScreenWidth(20)),
-                  label: Text("Пароль")),
+                  label:const Text("Пароль")),
             ),
             SizedBox(
               height: getPropScreenHeight(20),

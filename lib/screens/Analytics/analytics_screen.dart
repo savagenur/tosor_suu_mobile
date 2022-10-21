@@ -28,7 +28,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
             ],
           ),
         ),
-        body: Body(),
+        body:const Body(),
       ),
     );
   }

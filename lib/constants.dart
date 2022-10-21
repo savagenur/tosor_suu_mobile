@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
 
-const kPrimaryColor = Color.fromARGB(255, 248, 125, 81);
+const kPrimaryColor = Colors.blue;
 const kPrimaryLightColor = Color(0xFFFFECDF);
 const kPrimaryGradientLightColor = [
   LinearGradient(
@@ -20,6 +20,10 @@ final headingStyle = TextStyle(
   fontWeight: FontWeight.bold,
   color: Colors.black,
 );
+
+final  simpleTextStyle = TextStyle(
+                    fontSize: getPropScreenWidth(18), color: Colors.black);
+   
 
 const defaultDuration = Duration(milliseconds: 700);
 

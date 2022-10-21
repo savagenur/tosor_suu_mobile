@@ -12,7 +12,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final screens = [
+  final screens = const [
   AnalyticsScreen(),
     ClientsScreen(),
     TasksScreen(),

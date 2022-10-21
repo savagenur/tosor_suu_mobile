@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
 
 import '../../../../constants.dart';

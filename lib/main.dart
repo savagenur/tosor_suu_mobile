@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/routes.dart';
-import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/screens/Login/login_screen.dart';
 import 'package:tosor_suu_mobile/theme.dart';
 

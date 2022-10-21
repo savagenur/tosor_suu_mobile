@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tosor_suu_mobile/screens/Clients/components/body.dart';
 
 class ClientsScreen extends StatefulWidget {
   const ClientsScreen({super.key});
@@ -10,6 +11,10 @@ class ClientsScreen extends StatefulWidget {
 class _ClientsScreenState extends State<ClientsScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return const Scaffold(
+      body: Body(),
+    );
   }
 }
+
+

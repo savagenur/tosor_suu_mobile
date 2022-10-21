@@ -1,0 +1,30 @@
+
+   {
+    "isExpanded": false,
+    "number": 3,
+    "street": [
+      {
+        "isExpanded": false,
+        "title": "Valihanova",
+        "number": 1,
+        "date": "10.09.22",
+        "house": [
+          {
+            "isExpanded": false,
+            "title": "House",
+            "number": 5,
+            "flat": [
+              {
+                "isExpanded": false,
+                "title": "Flat",
+                "number": 57,
+                "debt": 1500,
+                "electric_meter_id": 1234321234
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+

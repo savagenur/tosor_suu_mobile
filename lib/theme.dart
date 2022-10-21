@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:tosor_suu_mobile/size_config.dart';
 
 import 'constants.dart';
 
@@ -11,7 +10,7 @@ ThemeData theme() {
       appBarTheme: appBarTheme(),
       inputDecorationTheme: inputDecorationTheme(),
       textTheme: textTheme(),
-      tabBarTheme: TabBarTheme(
+      tabBarTheme: const TabBarTheme(
         labelColor: Colors.black
       ),
       primarySwatch: Colors.blue,

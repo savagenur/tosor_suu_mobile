@@ -1,0 +1,11 @@
+framework module advance_expansion_tile {
+  umbrella header "advance_expansion_tile-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module advance_expansion_tile.Swift {
+  header "advance_expansion_tile-Swift.h"
+  requires objc
+}

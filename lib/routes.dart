@@ -7,9 +7,9 @@ class AppRouter {
     dynamic arguments = routeSettings.arguments;
     switch (routeSettings.name) {
       case LoginScreen.routeName:
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
       case HomeScreen.routeName:
-        return MaterialPageRoute(builder: (_) => HomeScreen());
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return MaterialPageRoute(builder: (_) => Container());
     }
