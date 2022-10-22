@@ -12,6 +12,9 @@ const kPrimaryGradientLightColor = [
 ];
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
+const kPriorityColor1 = Colors.amber;
+const kPriorityColor2 = Colors.orange;
+const kPriorityColor3 = Color.fromARGB(255, 248, 102, 92);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
@@ -21,9 +24,8 @@ final headingStyle = TextStyle(
   color: Colors.black,
 );
 
-final  simpleTextStyle = TextStyle(
-                    fontSize: getPropScreenWidth(18), color: Colors.black);
-   
+final simpleTextStyle =
+    TextStyle(fontSize: getPropScreenWidth(18), color: Colors.black);
 
 const defaultDuration = Duration(milliseconds: 700);
 
@@ -47,3 +49,13 @@ OutlineInputBorder outlineInputBorder() {
     borderSide: const BorderSide(color: kTextColor),
   );
 }
+
+// Priority Status
+const int kNormalStatusPriority = 1;
+const int kHighStatusPriority = 2;
+const int kEmergencyStatusPriority = 3;
+
+// Completion Status
+const int kInQueue = 1;
+const int kInWork = 2;
+const int kCompleteStatus = 3;

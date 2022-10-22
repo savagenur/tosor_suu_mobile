@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tosor_suu_mobile/screens/Analytics/My%20Analytics/components/tasks_expansion_list.dart';
+import 'package:tosor_suu_mobile/screens/Analytics/My%20Analytics/components/analytics_expansion_tile.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
 
 import '../../../../constants.dart';
@@ -10,8 +10,6 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
-
     return SizedBox(
       width: double.infinity,
       child: SingleChildScrollView(
@@ -31,7 +29,7 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(40),
             ),
-            const TasksExpansionList(),
+            const AnalyticsExpansionTile(),
             SizedBox(
               height: getPropScreenWidth(20),
             ),
@@ -41,5 +39,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-
