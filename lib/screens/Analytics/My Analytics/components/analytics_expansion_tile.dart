@@ -29,7 +29,7 @@ class AnalyticsExpansionTile extends StatelessWidget {
     final List<String> addresses = [
       "Ул. Ленина д7 кв99",
       "с. Лебединовка 66",
-      "с. Лебединовка 66",
+      "с. Лебединовка 09",
     ];
     return Column(
       children: [
@@ -38,7 +38,7 @@ class AnalyticsExpansionTile extends StatelessWidget {
           (index) {
             return Padding(
               padding: EdgeInsets.all(getPropScreenWidth(10)),
-              child: TasksExpansionTile(
+              child: TaskListTile(
                 title: headerTitles[index.toString()]["text"],
                 addresses: addresses,
                 color: headerTitles[index.toString()]["color"],
@@ -52,13 +52,13 @@ class AnalyticsExpansionTile extends StatelessWidget {
   }
 }
 
-class TasksExpansionTile extends StatelessWidget {
+class TaskListTile extends StatelessWidget {
   final String title;
   final List<String> addresses;
   final Color color;
   final IconData icon;
 
-  const TasksExpansionTile({
+  const TaskListTile({
     Key? key,
     required this.title,
     required this.addresses,

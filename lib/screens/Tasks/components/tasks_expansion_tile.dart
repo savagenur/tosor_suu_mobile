@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tosor_suu_mobile/screens/DetailTask/detail_task_screen.dart';
 
 import '../../../constants.dart';
 import '../../../data/tasks.dart';
@@ -28,7 +29,7 @@ class TasksExpansionTile extends StatelessWidget {
       children: [
         ...allTasks.map((task) {
           if (task.completionStatus == status) {
-            return buildTaskTile(task);
+            return buildTaskTile(context, task);
           }
           return Container();
         }),
@@ -36,30 +37,31 @@ class TasksExpansionTile extends StatelessWidget {
     );
   }
 
-  Padding buildTaskTile(Task task) {
+  Padding buildTaskTile(BuildContext context, Task task) {
     return Padding(
-            padding: EdgeInsets.all(getPropScreenWidth(10)),
-            child: InkWell(
-              onTap: () {},
-              radius: getPropScreenWidth(10),
-              child: ListTile(
-                shape: RoundedRectangleBorder(
-                    borderRadius:
-                        BorderRadius.circular(getPropScreenWidth(10))),
-                leading: const Icon(Icons.work),
-                subtitle: Text(task.date),
-                title: Text(
-                  task.task,
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-                tileColor: task.priorityStatus == kNormalStatusPriority
-                    ? kPriorityColor1
-                    : task.priorityStatus == kHighStatusPriority
-                        ? kPriorityColor2
-                        : kPriorityColor3,
-              ),
-            ),
-          );
+      padding: EdgeInsets.all(getPropScreenWidth(10)),
+      child: InkWell(
+        onTap: () {
+          Navigator.pushNamed(context, DetailTaskScreen.routeName,arguments: DetailTaskScreen(task: task));
+        },
+        radius: getPropScreenWidth(10),
+        child: ListTile(
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(getPropScreenWidth(10))),
+          leading: const Icon(Icons.work),
+          subtitle: Text(task.date),
+          title: Text(
+            task.task,
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
+          tileColor: task.priorityStatus == kNormalStatusPriority
+              ? kPriorityColor1
+              : task.priorityStatus == kHighStatusPriority
+                  ? kPriorityColor2
+                  : kPriorityColor3,
+        ),
+      ),
+    );
   }
 }

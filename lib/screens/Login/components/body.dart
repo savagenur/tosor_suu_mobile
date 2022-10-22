@@ -37,7 +37,8 @@ class Body extends StatelessWidget {
             ),
             DefaultButton(
               press: () {
-                Navigator.pushNamed(context, HomeScreen.routeName);
+                Navigator.pushNamed(context, HomeScreen.routeName , arguments: HomeScreen());
+                
               },
               text: "Вход",
             ),

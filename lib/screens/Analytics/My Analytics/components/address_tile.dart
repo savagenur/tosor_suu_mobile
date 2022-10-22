@@ -12,15 +12,20 @@ class AddressTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-        title: Text(address),
-        leading: Icon(
-          Icons.location_on,
-          color: color,
+    return InkWell(
+      onTap: () {
+        
+      },
+      child: ListTile(
+          title: Text(address),
+          leading: Icon(
+            Icons.location_on,
+            color: color,
+          ),
+          subtitle: const Text(
+            "10.02.20, 20:24",
+          ),
         ),
-        subtitle: const Text(
-          "10.02.20, 20:24",
-        ),
-      );
+    );
   }
 }

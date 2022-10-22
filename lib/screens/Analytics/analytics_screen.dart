@@ -16,6 +16,7 @@ class _AnalyticsScreenState extends State<AnalyticsScreen> {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           title: Text(
             MyApp.title,
             style: Theme.of(context).textTheme.headline6,

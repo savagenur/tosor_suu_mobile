@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/constants.dart';
+import 'package:tosor_suu_mobile/screens/CompletedTasks/completed_tasks_screen.dart';
 import 'package:tosor_suu_mobile/size_config.dart';
 
 import 'types_of_tasks.dart';
@@ -20,7 +21,10 @@ class Body extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton.icon(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(
+                          context, CompletedTasksScreen.routeName);
+                    },
                     icon: const Icon(Icons.check_circle_outline),
                     label: const Text("Завершенные заявки"),
                     style: TextButton.styleFrom(
@@ -32,9 +36,9 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-           const TypesOfTasks(),
+            const TypesOfTasks(),
             SizedBox(
-              height: getPropScreenWidth(20),
+              height: getPropScreenWidth(80),
             ),
           ],
         ),
@@ -42,7 +46,3 @@ class Body extends StatelessWidget {
     );
   }
 }
-
-
-
-

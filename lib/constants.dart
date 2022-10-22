@@ -56,6 +56,15 @@ const int kHighStatusPriority = 2;
 const int kEmergencyStatusPriority = 3;
 
 // Completion Status
-const int kInQueue = 1;
-const int kInWork = 2;
+const int kInQueueStatus = 1;
+const int kInWorkStatus = 2;
 const int kCompleteStatus = 3;
+const String kInQueueTextStatus = "В очереди";
+const String kInWorkTextStatus = "В работе";
+const String kCompleteTextStatus = "Завершенный";
+
+
+
+// BottomNavigationBar indexes
+const kCompletedTasksScreenIndex = 2;
+const kDetailTaskScreenIndex = 2;
