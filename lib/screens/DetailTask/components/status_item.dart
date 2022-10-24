@@ -44,10 +44,10 @@ class StatusItem extends StatelessWidget {
               backgroundColor: status == 3
                   ? null
                   : priority == 1
-                      ? kPriorityColor1
+                      ? kNormalPriorityColor
                       : priority == 2
-                          ? kPriorityColor2
-                          : kPriorityColor3,
+                          ? kHighPriorityColor
+                          : kEmergencyPriorityColor,
             ),
           ],
         ),

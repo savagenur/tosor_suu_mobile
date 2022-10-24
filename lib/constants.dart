@@ -12,9 +12,9 @@ const kPrimaryGradientLightColor = [
 ];
 const kSecondaryColor = Color(0xFF979797);
 const kTextColor = Color(0xFF757575);
-const kPriorityColor1 = Colors.amber;
-const kPriorityColor2 = Colors.orange;
-const kPriorityColor3 = Color.fromARGB(255, 248, 102, 92);
+const kNormalPriorityColor = Colors.amber;
+const kHighPriorityColor = Colors.orange;
+const kEmergencyPriorityColor = Color.fromARGB(255, 248, 102, 92);
 
 const kAnimationDuration = Duration(milliseconds: 200);
 
@@ -54,6 +54,9 @@ OutlineInputBorder outlineInputBorder() {
 const int kNormalStatusPriority = 1;
 const int kHighStatusPriority = 2;
 const int kEmergencyStatusPriority = 3;
+const String kNormalPriorityTextStatus = "Нормальный";
+const String kHighPriorityTextStatus = "Высокий";
+const String kEmergencyPriorityTextStatus = "Чрезвычайный";
 
 // Completion Status
 const int kInQueueStatus = 1;
@@ -63,8 +66,7 @@ const String kInQueueTextStatus = "В очереди";
 const String kInWorkTextStatus = "В работе";
 const String kCompleteTextStatus = "Завершенный";
 
-
-
 // BottomNavigationBar indexes
 const kCompletedTasksScreenIndex = 2;
 const kDetailTaskScreenIndex = 2;
+const kCreateTaskScreenIndex = 2;

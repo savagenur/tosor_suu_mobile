@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
+import 'package:tosor_suu_mobile/screens/Add%20New%20Client/add_new_client_screen.dart';
 import 'package:tosor_suu_mobile/screens/CompletedTasks/completed_tasks_screen.dart';
+import 'package:tosor_suu_mobile/screens/Create%20Task/create_task_screen.dart';
 import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/screens/Login/login_screen.dart';
 import 'package:tosor_suu_mobile/screens/DetailTask/detail_task_screen.dart';
@@ -24,12 +26,22 @@ class AppRouter {
       case DetailTaskScreen.routeName:
         arguments as DetailTaskScreen;
         return PageTransition(
-            child: DetailTaskScreen(task: arguments.task),
+            child: DetailTaskScreen(task: arguments.task,isCompleted: arguments.isCompleted,),
             type: PageTransitionType.bottomToTop,
             );
       case CompletedTasksScreen.routeName:
         return PageTransition(
             child: const CompletedTasksScreen(),
+            type: PageTransitionType.rightToLeft);
+
+      case CreateTaskScreen.routeName:
+        return PageTransition(
+            child: const CreateTaskScreen(),
+            type: PageTransitionType.rightToLeft);
+
+      case AddNewClientScreen.routeName:
+        return PageTransition(
+            child: const AddNewClientScreen(),
             type: PageTransitionType.rightToLeft);
 
       default:

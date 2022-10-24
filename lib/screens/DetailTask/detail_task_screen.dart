@@ -6,8 +6,9 @@ import 'package:tosor_suu_mobile/screens/DetailTask/components/body.dart';
 
 class DetailTaskScreen extends StatelessWidget {
   static const routeName = "/detail-task";
-  const DetailTaskScreen({super.key, required this.task});
+  const DetailTaskScreen({super.key, required this.task, this.isCompleted=false});
   final Task task;
+  final bool isCompleted;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +19,7 @@ class DetailTaskScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headline6,
         ),
       ),
-      body: Body(task: task,),
+      body: Body(task: task, isCompleted: isCompleted,),
       bottomNavigationBar: const DefaultBottomNavigationBar(
           currentIndex: kDetailTaskScreenIndex),
     );

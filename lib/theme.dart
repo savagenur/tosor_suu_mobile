@@ -13,9 +13,18 @@ ThemeData theme() {
       tabBarTheme: const TabBarTheme(
         labelColor: Colors.black
       ),
+      textButtonTheme: textButtonTheme(),
       primarySwatch: Colors.blue,
     );
   }
+
+TextButtonThemeData textButtonTheme() {
+  return TextButtonThemeData(
+      style: TextButton.styleFrom(
+        side: const BorderSide(color: kPrimaryColor)
+      )
+    );
+}
  
 AppBarTheme appBarTheme() {
   return const AppBarTheme(

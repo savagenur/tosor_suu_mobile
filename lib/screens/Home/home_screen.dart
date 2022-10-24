@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/screens/Analytics/analytics_screen.dart';
 import 'package:tosor_suu_mobile/screens/Clients/clients_screen.dart';
+import 'package:tosor_suu_mobile/screens/Create%20Task/create_task_screen.dart';
 import 'package:tosor_suu_mobile/screens/Tasks/tasks_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -53,9 +54,12 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: currentIndex == 2
-          ? ElevatedButton.icon(onPressed: () {
-                
-              }, icon: Icon(Icons.add), label: Text("Создание заявки"))
+          ? ElevatedButton.icon(
+              onPressed: () {
+                Navigator.pushNamed(context, CreateTaskScreen.routeName);
+              },
+              icon: Icon(Icons.add),
+              label: Text("Создание заявки"))
           : null,
     );
   }

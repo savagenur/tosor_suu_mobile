@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
       child: InkWell(
         onTap: () {
           Navigator.pushNamed(context, DetailTaskScreen.routeName,
-              arguments: DetailTaskScreen(task: task));
+              arguments: DetailTaskScreen(task: task,isCompleted: true,));
         },
         radius: getPropScreenWidth(10),
         child: ListTile(

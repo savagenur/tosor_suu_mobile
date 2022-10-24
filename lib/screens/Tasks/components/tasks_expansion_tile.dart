@@ -42,7 +42,8 @@ class TasksExpansionTile extends StatelessWidget {
       padding: EdgeInsets.all(getPropScreenWidth(10)),
       child: InkWell(
         onTap: () {
-          Navigator.pushNamed(context, DetailTaskScreen.routeName,arguments: DetailTaskScreen(task: task));
+          Navigator.pushNamed(context, DetailTaskScreen.routeName,
+              arguments: DetailTaskScreen(task: task));
         },
         radius: getPropScreenWidth(10),
         child: ListTile(
@@ -56,10 +57,10 @@ class TasksExpansionTile extends StatelessWidget {
             overflow: TextOverflow.ellipsis,
           ),
           tileColor: task.priorityStatus == kNormalStatusPriority
-              ? kPriorityColor1
+              ? kNormalPriorityColor
               : task.priorityStatus == kHighStatusPriority
-                  ? kPriorityColor2
-                  : kPriorityColor3,
+                  ? kHighPriorityColor
+                  : kEmergencyPriorityColor,
         ),
       ),
     );

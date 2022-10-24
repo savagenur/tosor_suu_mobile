@@ -5,8 +5,10 @@ import 'package:tosor_suu_mobile/screens/DetailTask/components/status_item.dart'
 import 'description_item.dart';
 
 class Body extends StatelessWidget {
-  const Body({super.key, required this.task});
-  final Task task;
+   final Task task;
+  final bool isCompleted;
+  const Body({super.key, required this.task,  this.isCompleted=false});
+ 
 
   @override
   Widget build(BuildContext context) {
@@ -35,18 +37,13 @@ class Body extends StatelessWidget {
                 iconData: Icons.phone,
                 iconCircleColor: Colors.teal),
             DescriptionItem(
-                title: "Описание проблемы",
-                subtitle: task.task,
+                title: !isCompleted? "Описание проблемы":"Комментарий",
+                subtitle: !isCompleted?task.task : "Мы исправили все неполадки, и решили все проблемы связанные с '${task.task}'",
                 iconData: Icons.description,
                 iconCircleColor: Colors.indigo),
-            
           ],
         ),
       ),
     );
   }
 }
-
-
-
-

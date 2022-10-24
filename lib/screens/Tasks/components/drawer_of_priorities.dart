@@ -24,9 +24,30 @@ class DrawerOfPriorities extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 const Divider(),
-                ListTile(leading: const CircleAvatar(backgroundColor: kPriorityColor1),title: Text("Нормальный",style: simpleTextStyle,),),
-                ListTile(leading: const CircleAvatar(backgroundColor: kPriorityColor2),title: Text("Высокий",style: simpleTextStyle,),),
-                ListTile(leading: const CircleAvatar(backgroundColor: kPriorityColor3),title: Text("Чрезвычайный",style: simpleTextStyle,),),
+                ListTile(
+                  leading:
+                      const CircleAvatar(backgroundColor: kNormalPriorityColor),
+                  title: Text(
+                    kNormalPriorityTextStatus,
+                    style: simpleTextStyle,
+                  ),
+                ),
+                ListTile(
+                  leading:
+                      const CircleAvatar(backgroundColor: kHighPriorityColor),
+                  title: Text(
+                    kHighPriorityTextStatus,
+                    style: simpleTextStyle,
+                  ),
+                ),
+                ListTile(
+                  leading: const CircleAvatar(
+                      backgroundColor: kEmergencyPriorityColor),
+                  title: Text(
+                    kEmergencyPriorityTextStatus,
+                    style: simpleTextStyle,
+                  ),
+                ),
               ],
             ),
           ),
