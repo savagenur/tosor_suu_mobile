@@ -53,7 +53,7 @@ TextTheme textTheme() {
 InputDecorationTheme inputDecorationTheme() {
   return InputDecorationTheme(
       contentPadding:
-          const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
+          const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
       border: outlineInputBorder(),
       enabledBorder: outlineInputBorder(),
       focusedBorder: outlineInputBorder(),
