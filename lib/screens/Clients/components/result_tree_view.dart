@@ -1,6 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_simple_treeview/flutter_simple_treeview.dart';
+import 'package:tosor_suu_mobile/models/client.dart';
+import 'package:tosor_suu_mobile/screens/DetailClient/detail_client_screen.dart';
 
 import '../../../constants.dart';
 import '../../../data/areas.dart';
@@ -31,18 +32,16 @@ class _ResultTreeViewState extends State<ResultTreeView> {
               TextButton.icon(
                   onPressed: () {
                     setState(() {
-                    treeController.collapseAll();
-                      
+                      treeController.collapseAll();
                     });
                   },
                   icon: const Icon(Icons.arrow_drop_up_rounded),
                   label: const Text("Свернуть")),
               TextButton.icon(
                   onPressed: () {
-        setState(() {
-                    treeController.expandAll();
-          
-        });
+                    setState(() {
+                      treeController.expandAll();
+                    });
                   },
                   icon: const Icon(Icons.arrow_drop_down_rounded),
                   label: const Text("Развернуть")),
@@ -71,21 +70,29 @@ class _ResultTreeViewState extends State<ResultTreeView> {
                                       style: simpleTextStyle,
                                     ),
                                     children: [
-                                      ...house.entrance!.map((entrance) =>
-                                          TreeNode(
-                                            content: Text(
-                                              "${entrance.title!} ${entrance.number!}",
-                                              style: simpleTextStyle,
-                                            ),
-                                            children: [
-                                              ...entrance.flat!
-                                                  .map((flat) => TreeNode(
-                                                        content:
-                                                            buildFlatView(flat),
-                                                        children: [],
-                                                      ))
-                                            ],
-                                          ))
+                                      ...house.entrance!
+                                          .map((entrance) => TreeNode(
+                                                content: Text(
+                                                  "${entrance.title!} ${entrance.number!}",
+                                                  style: simpleTextStyle,
+                                                ),
+                                                children: [
+                                                  ...entrance.flat!.map((flat) {
+                                                    final Client client =
+                                                        Client(
+                                                            area: area,
+                                                            street: street,
+                                                            house: house,
+                                                            entrance: entrance,
+                                                            flat: flat);
+                                                    return TreeNode(
+                                                      content:
+                                                          buildFlatView(client),
+                                                      children: [],
+                                                    );
+                                                  })
+                                                ],
+                                              ))
                                     ],
                                   )),
                             ])),
@@ -97,7 +104,8 @@ class _ResultTreeViewState extends State<ResultTreeView> {
     );
   }
 
-  Widget buildFlatView(Flat flat) {
+  Widget buildFlatView(Client client) {
+    final Flat flat = client.flat;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -157,7 +165,10 @@ class _ResultTreeViewState extends State<ResultTreeView> {
                     color: kTextColor,
                   ),
             IconButton(
-                onPressed: () {}, icon: const Icon(Icons.info, color: kPrimaryColor))
+                onPressed: () {
+                  Navigator.pushNamed(context, DetailClientScreen.routeName, arguments: DetailClientScreen(client:client));
+                },
+                icon: const Icon(Icons.info, color: kPrimaryColor))
           ],
         )
       ],

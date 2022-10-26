@@ -17,13 +17,16 @@ final List<Area> allArea = [
                   isExistElectricMeter: false,
                   isRecordedElectricMeter: 1,
                   debt: 25000,
+                  nameSurname: "Валерий Кадыпов",
                   electricMeterId: 0102423,
                   number: 12,
+                  
                 ),
                 Flat(
                   debt: 25000,
                   electricMeterId: 0102423,
                   number: 32,
+                  nameSurname: "Валерий Кадыпов"
                 ),
                 Flat(
                   debt: 25000,

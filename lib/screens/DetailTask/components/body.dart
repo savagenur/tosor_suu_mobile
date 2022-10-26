@@ -41,6 +41,7 @@ class Body extends StatelessWidget {
                 subtitle: !isCompleted?task.task : "Мы исправили все неполадки, и решили все проблемы связанные с '${task.task}'",
                 iconData: Icons.description,
                 iconCircleColor: Colors.indigo),
+                Text(task.date)
           ],
         ),
       ),

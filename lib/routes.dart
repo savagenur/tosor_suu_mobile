@@ -3,6 +3,7 @@ import 'package:page_transition/page_transition.dart';
 import 'package:tosor_suu_mobile/screens/Add%20New%20Client/add_new_client_screen.dart';
 import 'package:tosor_suu_mobile/screens/CompletedTasks/completed_tasks_screen.dart';
 import 'package:tosor_suu_mobile/screens/Create%20Task/create_task_screen.dart';
+import 'package:tosor_suu_mobile/screens/DetailClient/detail_client_screen.dart';
 import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/screens/Login/login_screen.dart';
 import 'package:tosor_suu_mobile/screens/DetailTask/detail_task_screen.dart';
@@ -26,9 +27,12 @@ class AppRouter {
       case DetailTaskScreen.routeName:
         arguments as DetailTaskScreen;
         return PageTransition(
-            child: DetailTaskScreen(task: arguments.task,isCompleted: arguments.isCompleted,),
-            type: PageTransitionType.bottomToTop,
-            );
+          child: DetailTaskScreen(
+            task: arguments.task,
+            isCompleted: arguments.isCompleted,
+          ),
+          type: PageTransitionType.bottomToTop,
+        );
       case CompletedTasksScreen.routeName:
         return PageTransition(
             child: const CompletedTasksScreen(),
@@ -43,6 +47,11 @@ class AppRouter {
         return PageTransition(
             child: const AddNewClientScreen(),
             type: PageTransitionType.rightToLeft);
+      case DetailClientScreen.routeName:
+        arguments as DetailClientScreen;
+        return PageTransition(
+            child:  DetailClientScreen(client: arguments.client,),
+            type: PageTransitionType.bottomToTop);
 
       default:
         return MaterialPageRoute(builder: (_) => Container());

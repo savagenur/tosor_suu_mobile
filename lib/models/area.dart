@@ -155,6 +155,9 @@ class Entrance {
 class Flat {
   bool? isExpanded;
   String? title;
+  String? nameSurname;
+  int? phoneNumber;
+  int? personalAccount;
   int? number;
   int? debt;
   int? electricMeterId;
@@ -164,6 +167,9 @@ class Flat {
   Flat(
       {this.isExpanded = false,
       this.title = "Квартира",
+      this.nameSurname = "Чингиз Алымов",
+      this.phoneNumber = 996778354011,
+      this.personalAccount = 02478792342431,
       this.number,
       this.isExistElectricMeter =true,
       this.isRecordedElectricMeter=0,
@@ -173,6 +179,8 @@ class Flat {
   Flat.fromJson(Map<String, dynamic> json) {
     isExpanded = json['isExpanded'];
     title = json['title'];
+    nameSurname = json['nameSurname'];
+    personalAccount = json['personalAccount'];
     number = json['number'];
     isExistElectricMeter = json['isExistElectricMeter'];
     isRecordedElectricMeter = json['isRecordedElectricMeter'];
@@ -184,6 +192,8 @@ class Flat {
     final Map<String, dynamic> data = <String, dynamic>{};
     data['isExpanded'] = false;
     data['title'] = "Квартира";
+    data['nameSurname'] = this.nameSurname;
+    data['personalAccount'] = this.nameSurname;
     data['number'] = this.number;
     data['isExistElectricMeter'] = this.isExistElectricMeter;
     data['isRecordedElectricMeter'] = this.isRecordedElectricMeter;

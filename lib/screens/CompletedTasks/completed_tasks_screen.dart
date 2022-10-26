@@ -15,6 +15,14 @@ class CompletedTasksScreen extends StatelessWidget {
           "Выполненные заявки",
           style: Theme.of(context).textTheme.headline6,
         ),
+        actions: [
+          IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.filter_alt_rounded,
+                color: kPrimaryColor,
+              ))
+        ],
       ),
       body: const Body(),
       bottomNavigationBar: const DefaultBottomNavigationBar(
