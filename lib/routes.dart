@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:tosor_suu_mobile/screens/Add%20New%20Client/add_new_client_screen.dart';
 import 'package:tosor_suu_mobile/screens/CompletedTasks/completed_tasks_screen.dart';
-import 'package:tosor_suu_mobile/screens/Create%20Task/create_task_screen.dart';
+import 'package:tosor_suu_mobile/screens/CreateTaskToStaff/create_task_to_staff_screen.dart';
+import 'package:tosor_suu_mobile/screens/CreateTask/create_task_screen.dart';
 import 'package:tosor_suu_mobile/screens/DetailClient/detail_client_screen.dart';
 import 'package:tosor_suu_mobile/screens/Home/home_screen.dart';
 import 'package:tosor_suu_mobile/screens/Login/login_screen.dart';
@@ -52,6 +53,11 @@ class AppRouter {
         return PageTransition(
             child:  DetailClientScreen(client: arguments.client,),
             type: PageTransitionType.bottomToTop);
+      case CreateTaskToStaffScreen.routeName:
+        arguments as CreateTaskToStaffScreen;
+        return PageTransition(
+            child:  CreateTaskToStaffScreen(client: arguments.client,),
+            type: PageTransitionType.leftToRight);
 
       default:
         return MaterialPageRoute(builder: (_) => Container());

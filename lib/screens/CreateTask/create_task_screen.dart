@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/components/default_bottom_navigation_bar.dart';
 import 'package:tosor_suu_mobile/constants.dart';
-import 'package:tosor_suu_mobile/screens/Create%20Task/components/body.dart';
+import 'package:tosor_suu_mobile/screens/CreateTask/components/body.dart';
 
 class CreateTaskScreen extends StatelessWidget {
   static const routeName = '/create-task';

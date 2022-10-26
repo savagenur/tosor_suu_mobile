@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tosor_suu_mobile/screens/Analytics/analytics_screen.dart';
 import 'package:tosor_suu_mobile/screens/Clients/clients_screen.dart';
-import 'package:tosor_suu_mobile/screens/Create%20Task/create_task_screen.dart';
+import 'package:tosor_suu_mobile/screens/CreateTask/create_task_screen.dart';
 import 'package:tosor_suu_mobile/screens/Tasks/tasks_screen.dart';
 
 class HomeScreen extends StatefulWidget {

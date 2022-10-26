@@ -35,9 +35,18 @@ class _ResultTreeViewState extends State<ResultTreeView> {
                       treeController.collapseAll();
                     });
                   },
+                  style: TextButton.styleFrom(
+                    side: BorderSide.none,
+                  ),
                   icon: const Icon(Icons.arrow_drop_up_rounded),
                   label: const Text("Свернуть")),
+              SizedBox(
+                width: getPropScreenWidth(5),
+              ),
               TextButton.icon(
+                  style: TextButton.styleFrom(
+                    side: BorderSide.none,
+                  ),
                   onPressed: () {
                     setState(() {
                       treeController.expandAll();
@@ -166,7 +175,8 @@ class _ResultTreeViewState extends State<ResultTreeView> {
                   ),
             IconButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, DetailClientScreen.routeName, arguments: DetailClientScreen(client:client));
+                  Navigator.pushNamed(context, DetailClientScreen.routeName,
+                      arguments: DetailClientScreen(client: client));
                 },
                 icon: const Icon(Icons.info, color: kPrimaryColor))
           ],

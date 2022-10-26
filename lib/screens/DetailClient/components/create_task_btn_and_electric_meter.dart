@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tosor_suu_mobile/screens/CreateTaskToStaff/create_task_to_staff_screen.dart';
 
 import '../../../models/client.dart';
 import '../../../size_config.dart';
@@ -19,9 +20,12 @@ class CreateTaskBtnAndElectricMeter extends StatelessWidget {
         children: [
           Expanded(
             child: ElevatedButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(
+                    context, CreateTaskToStaffScreen.routeName,arguments: CreateTaskToStaffScreen(client: client));
+              },
               icon: const Icon(Icons.add),
-              label:  const Padding(
+              label: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 10),
                   child: Text("Создание заявки\nтех. службе")),
               style: ElevatedButton.styleFrom(
@@ -43,17 +47,28 @@ class CreateTaskBtnAndElectricMeter extends StatelessWidget {
             width: getPropScreenWidth(20),
           ),
           Expanded(
-              child: client.flat.isExistElectricMeter!? Column(
-                children: [
-                  Icon(Icons.electric_meter,color: client.flat.isRecordedElectricMeter==1?Colors.green:Colors.red,),
-                  SizedBox(height: getPropScreenWidth(5),),
-                  Text(
-                   client.flat.isRecordedElectricMeter==1?"Показания за август вбиты": "Вбейте показания за август",
-                    textAlign: TextAlign.center,
-
+            child: client.flat.isExistElectricMeter!
+                ? Column(
+                    children: [
+                      Icon(
+                        Icons.electric_meter,
+                        color: client.flat.isRecordedElectricMeter == 1
+                            ? Colors.green
+                            : Colors.red,
+                      ),
+                      SizedBox(
+                        height: getPropScreenWidth(5),
+                      ),
+                      Text(
+                        client.flat.isRecordedElectricMeter == 1
+                            ? "Показания за август вбиты"
+                            : "Вбейте показания за август",
+                        textAlign: TextAlign.center,
+                      )
+                    ],
                   )
-                ],
-              ):Container(),)
+                : Container(),
+          )
         ],
       ),
     );

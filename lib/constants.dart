@@ -72,3 +72,4 @@ const kDetailTaskScreenIndex = 2;
 const kCreateTaskScreenIndex = 2;
 const kAddNewClientScreenIndex = 1;
 const kDetailClientScreenIndex = 1;
+const kCreateTaskToStaffScreenIndex = 1;

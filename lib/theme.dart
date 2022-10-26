@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tosor_suu_mobile/size_config.dart';
 
 import 'constants.dart';
 
 ThemeData theme() {
     return ThemeData(
       scaffoldBackgroundColor: Colors.white,
-      fontFamily: "Muli",
+      // fontFamily: "Muli",
       appBarTheme: appBarTheme(),
       inputDecorationTheme: inputDecorationTheme(),
       textTheme: textTheme(),
@@ -14,9 +15,18 @@ ThemeData theme() {
         labelColor: Colors.black
       ),
       textButtonTheme: textButtonTheme(),
+      popupMenuTheme: popupMenuTheme(),
       primarySwatch: Colors.blue,
     );
   }
+
+PopupMenuThemeData popupMenuTheme() {
+  return PopupMenuThemeData(
+      shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(getPropScreenWidth(20))
+    ),
+    );
+}
 
 TextButtonThemeData textButtonTheme() {
   return TextButtonThemeData(
