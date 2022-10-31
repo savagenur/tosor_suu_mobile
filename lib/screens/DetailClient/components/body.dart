@@ -34,7 +34,7 @@ class Body extends StatelessWidget {
             SizedBox(
               height: getPropScreenWidth(20),
             ),
-            const ThreeButtons(),
+             ThreeButtons(client: client,),
             SizedBox(
               height: getPropScreenWidth(20),
             ),
